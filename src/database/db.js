@@ -12,8 +12,8 @@ client.connect()
 
 
 const getBook = async (req, res)=> {
-    const resultado= await client.query('select * from book')
-    console.log(resultado.rows);
+    const resultado= await client.query('select * from books')
+    //console.log(resultado.rows);
     res.json(resultado.rows)
 }
 
