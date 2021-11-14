@@ -11,11 +11,9 @@ const client = new Client({
 client.connect()
 
 
-const getBook = async (req, res)=> {
-    const resultado= await client.query('select * from books')
+exports.getBook = async (req, res)=> {
+    const resultado = await client.query('select * from books')
     //console.log(resultado.rows);
     res.json(resultado.rows)
 }
 
-
-module.exports = getBook
